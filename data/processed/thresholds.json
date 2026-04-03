@@ -1,0 +1,30 @@
+{
+  "wastewater": {
+    "ph_min": 6.0,
+    "ph_max": 9.0,
+    "cod": 15.0,
+    "tss": 20.0,
+    "ammonia": 2.0,
+    "flow_out": 9.5
+  },
+  "water": {
+    "ph_min": 6.5,
+    "ph_max": 8.5,
+    "turbidity": 1.0,
+    "nitrate": 80.0,
+    "conductivity": 300.0,
+    "tss": 5.0
+  },
+  "stack_emission": {
+    "nh3": 1.2,
+    "pm": 5.0,
+    "flow": 70000.0
+  },
+  "ambient_air": {
+    "pm25": 25.0,
+    "pm10": 45.0,
+    "co": 2500.0,
+    "no2": 30.0,
+    "o3": 60.0
+  }
+}

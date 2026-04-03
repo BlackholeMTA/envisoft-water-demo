@@ -1,0 +1,23 @@
+services:
+  init_data:
+    build:
+      context: .
+      dockerfile: Dockerfile.init
+    container_name: envisoft_init_data
+    volumes:
+      - .:/app
+    restart: "no"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    container_name: envisoft_streamlit_app
+    depends_on:
+      init_data:
+        condition: service_completed_successfully
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    restart: unless-stopped

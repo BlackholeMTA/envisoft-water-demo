@@ -1,0 +1,86 @@
+[
+  {
+    "station_code": "HN_BKHN",
+    "station_name": "Trạm HN_BKHN",
+    "domain": "ambient_air",
+    "scenario": "normal",
+    "observed_at": "2026-03-25T00:05:00",
+    "is_alert": true,
+    "alert_count": 3,
+    "final_status": "Cảnh báo ô nhiễm",
+    "level": "danger",
+    "reasons": [
+      "pm10 vượt ngưỡng (48.24 > 45.0)",
+      "pm25 vượt ngưỡng (27.81 > 25.0)",
+      "co vượt ngưỡng (3087.03 > 2500.0)"
+    ],
+    "camera_image": "data/camera/normal/normal_04.jpg",
+    "ai_prediction": "Chưa phát hiện rõ ô nhiễm",
+    "ai_confidence": 0.55,
+    "dark_ratio": 0.068,
+    "ai_note": "AI demo dựa trên tỷ lệ vùng tối/đục trong ảnh."
+  },
+  {
+    "station_code": "HN_PHCH",
+    "station_name": "Trạm HN_PHCH",
+    "domain": "water",
+    "scenario": "normal",
+    "observed_at": "2026-02-03T12:45:00",
+    "is_alert": true,
+    "alert_count": 3,
+    "final_status": "Cảnh báo ô nhiễm",
+    "level": "danger",
+    "reasons": [
+      "pH cao (8.81 > 8.5)",
+      "conductivity vượt ngưỡng (329.0 > 300.0)",
+      "nitrate vượt ngưỡng (253.0 > 80.0)"
+    ],
+    "camera_image": "data/camera/normal/normal_02.jpg",
+    "ai_prediction": "Chưa phát hiện rõ ô nhiễm",
+    "ai_confidence": 0.55,
+    "dark_ratio": 0.068,
+    "ai_note": "AI demo dựa trên tỷ lệ vùng tối/đục trong ảnh."
+  },
+  {
+    "station_code": "TB_CAPH",
+    "station_name": "Trạm TB_CAPH",
+    "domain": "wastewater",
+    "scenario": "normal",
+    "observed_at": "2026-03-25T00:00:00",
+    "is_alert": true,
+    "alert_count": 4,
+    "final_status": "Cảnh báo ô nhiễm",
+    "level": "danger",
+    "reasons": [
+      "flow_out vượt ngưỡng (10.1973 > 9.5)",
+      "ammonia vượt ngưỡng (2.3308 > 2.0)",
+      "cod vượt ngưỡng (16.2482 > 15.0)",
+      "tss vượt ngưỡng (24.1999 > 20.0)"
+    ],
+    "camera_image": "data/camera/normal/normal_01.jpg",
+    "ai_prediction": "Chưa phát hiện rõ ô nhiễm",
+    "ai_confidence": 0.55,
+    "dark_ratio": 0.068,
+    "ai_note": "AI demo dựa trên tỷ lệ vùng tối/đục trong ảnh."
+  },
+  {
+    "station_code": "TB_NMAM",
+    "station_name": "Trạm TB_NMAM",
+    "domain": "stack_emission",
+    "scenario": "normal",
+    "observed_at": "2026-03-25T00:00:00",
+    "is_alert": true,
+    "alert_count": 2,
+    "final_status": "Cảnh báo ô nhiễm",
+    "level": "danger",
+    "reasons": [
+      "nh3 vượt ngưỡng (1.5858 > 1.2)",
+      "pm vượt ngưỡng (7.17 > 5.0)"
+    ],
+    "camera_image": "data/camera/normal/normal_03.jpg",
+    "ai_prediction": "Chưa phát hiện rõ ô nhiễm",
+    "ai_confidence": 0.55,
+    "dark_ratio": 0.068,
+    "ai_note": "AI demo dựa trên tỷ lệ vùng tối/đục trong ảnh."
+  }
+]
