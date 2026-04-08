@@ -332,8 +332,6 @@ def render_popup_overlay(station_result: dict) -> None:
         <div class="env-popup-line"><b>Trạm:</b> {station_result.get("station_name", "-")}</div>
         <div class="env-popup-line"><b>Kết luận:</b> {station_result.get("final_status", "-")}</div>
         <div class="env-popup-line"><b>Chi tiết:</b> {short_reason}{more_text}</div>
-        <div class="env-popup-line"><b>RMSE:</b> {format_metric_value(station_result.get("rmse"))}</div>
-        <div class="env-popup-line"><b>NRMSE:</b> {format_metric_value(station_result.get("nrmse_percent"))}%</div>
         <div class="env-popup-note">
           Hệ thống đã phát hiện chỉ số vượt ngưỡng demo. Vui lòng kiểm tra ngay.
         </div>
@@ -378,7 +376,7 @@ if query_action == "view" and query_station:
 st.title("Demo cảnh báo ô nhiễm đa trạm")
 st.caption(
     "Khi chỉ số vượt ngưỡng demo, hệ thống phát cảnh báo màn hình + âm thanh, "
-    "đồng thời hiển thị camera, AI dự đoán từ ảnh, RMSE và NRMSE."
+    "đồng thời hiển thị camera, AI dự đoán từ ảnh."
 )
 
 scenario = st.sidebar.radio(
@@ -447,13 +445,11 @@ if selected_result["is_alert"]:
 else:
     st.success(f"{selected_result['station_name']} đang ở trạng thái bình thường")
 
-summary_cols = st.columns(6)
+summary_cols = st.columns(4)
 summary_cols[0].metric("Trạm", selected_result["station_code"])
 summary_cols[1].metric("Loại dữ liệu", selected_result["domain"])
 summary_cols[2].metric("Kết luận", selected_result["final_status"])
 summary_cols[3].metric("Số chỉ số vượt ngưỡng", str(selected_result["alert_count"]))
-summary_cols[4].metric("RMSE", format_metric_value(selected_result["rmse"], 3))
-summary_cols[5].metric("NRMSE", f"{format_metric_value(selected_result['nrmse_percent'], 2)}%")
 
 col1, col2 = st.columns([1.2, 1])
 
@@ -615,8 +611,6 @@ for station_code in station_options:
             "Loại dữ liệu": result["domain"],
             "Kết luận": result["final_status"],
             "Số chỉ số vượt": result["alert_count"],
-            "RMSE": format_metric_value(result["rmse"], 3),
-            "NRMSE (%)": format_metric_value(result["nrmse_percent"], 2),
             "AI ảnh": result["ai_prediction"],
         }
     )
